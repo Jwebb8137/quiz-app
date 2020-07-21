@@ -76,6 +76,7 @@ function renderQuestion() {
     
     `<form id="js-quiz-form" method="post" class="js-question-area">
         <fieldset>
+            <legend>Answer Questions</legend>
             <section class="main-image">
                 <div class="item">
                     <img src="${QUESTIONS[counter].imageSrc}" height="300" width="400" alt="${QUESTIONS[0].imageAlt}">

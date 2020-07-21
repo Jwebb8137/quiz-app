@@ -94,6 +94,10 @@ fieldset {
     border: none;
 }
 
+legend {
+    display: none;
+}
+
 /* --- quiz summary styling --- */
 
 .summary-reponse {
