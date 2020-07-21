@@ -75,67 +75,69 @@ function renderQuestion() {
     const questionString = 
     
     `<form id="js-quiz-form" method="post" class="js-question-area">
-        <section class="main-image">
-            <div class="item">
-                <img src="${QUESTIONS[counter].imageSrc}" height="300" width="400" alt="${QUESTIONS[0].imageAlt}">
-            </div>
-        </section>
+        <fieldset>
+            <section class="main-image">
+                <div class="item">
+                    <img src="${QUESTIONS[counter].imageSrc}" height="300" width="400" alt="${QUESTIONS[0].imageAlt}">
+                </div>
+            </section>
 
-        <section class="question-box group">
-            <div class="item">
-                <p class="js-question">${QUESTIONS[counter].question}</p>
-            </div>
-        </section>
+            <section class="question-box group">
+                <div class="item">
+                    <p class="js-question">${QUESTIONS[counter].question}</p>
+                </div>
+            </section>
 
-        <section class="answer-box group">
-            <div class="item">
-                <input type = "radio"
-                    name = "answers"
-                    id = "answer1"
-                    value = "Possible Answer 1" 
-                    required
-                    />
-                <label class = "radio" for = "answer1">${QUESTIONS[counter].possibleAnswers[0]}</label>
-            </div>
-        </section>
+            <section class="answer-box group">
+                <div class="item">
+                    <input type = "radio"
+                        name = "answers"
+                        id = "answer1"
+                        value = "Possible Answer 1" 
+                        required
+                        />
+                    <label class = "radio" for = "answer1">${QUESTIONS[counter].possibleAnswers[0]}</label>
+                </div>
+            </section>
 
-        <section class="answer-box group">
-            <div class="item">
-                <input type = "radio"
-                    class = "radio-btn"
-                    name = "answers"
-                    id = "answer2"
-                    value = "Possible Answer 2" />
-                <label class = "radio" for = "answer2">
-                    ${QUESTIONS[counter].possibleAnswers[1]}    
-                </label>
-            </div>
-        </section>
+            <section class="answer-box group">
+                <div class="item">
+                    <input type = "radio"
+                        class = "radio-btn"
+                        name = "answers"
+                        id = "answer2"
+                        value = "Possible Answer 2" />
+                    <label class = "radio" for = "answer2">
+                        ${QUESTIONS[counter].possibleAnswers[1]}    
+                    </label>
+                </div>
+            </section>
 
-        <section class="answer-box group">
-            <div class="item">
-                <input type = "radio"
-                    name = "answers"
-                    id = "answer3"
-                    value = "Possible Answer 3" />
-                <label class = "radio" for = "answer3">${QUESTIONS[counter].possibleAnswers[2]}</label>
-            </div>
-        </section>
+            <section class="answer-box group">
+                <div class="item">
+                    <input type = "radio"
+                        name = "answers"
+                        id = "answer3"
+                        value = "Possible Answer 3" />
+                    <label class = "radio" for = "answer3">${QUESTIONS[counter].possibleAnswers[2]}</label>
+                </div>
+            </section>
 
-        <section class="answer-box group">
-            <div class="item">
-                <input type = "radio"
-                    name = "answers"
-                    id = "answer4"
-                    value = "Possible Answer 4" />
-                <label class = "radio" for = "answer4">${QUESTIONS[counter].possibleAnswers[3]}</label>
-            </div>
-        </section>
-        <section class="submit-container">
-            <input type="submit" id="submit-answer" class="btn-style">
-        </section>
-        <br>
-        <section class="answer-display"></section>
+            <section class="answer-box group">
+                <div class="item">
+                    <input type = "radio"
+                        name = "answers"
+                        id = "answer4"
+                        value = "Possible Answer 4" />
+                    <label class = "radio" for = "answer4">${QUESTIONS[counter].possibleAnswers[3]}</label>
+                </div>
+            </section>
+            <section class="submit-container">
+                <input type="submit" id="submit-answer" class="btn-style">
+            </section>
+            <br>
+            <section class="answer-display"></section>
+        </fielset>
     </form>
     `;
 
@@ -211,14 +213,14 @@ function renderQuizSummary() {
     if (totalCorrect >= 5) {
         const goodQuizSummary = `
         <span class="summary-reponse">"Herodotus would be proud!"</span>
-        <div class="quiz-summary-container"><img src="images/good-score-image.jpg" alt="Cartoon Greek Man" height="400px" width="300px"><p class="quiz-summary">Congratulations</p>
+        <div class="quiz-summary-container"><img src="images/good-score-image.jpg" alt="Cartoon Greek Man" height="400px" width="300px"><p class="quiz-summary">Congratulations!</p>
         <span class="quiz-summary-span">You scored <b>${parseInt(totalCorrect/QUESTIONS.length * 100)}%</b>!</span></div>
         `
         $('.js-question-area').html(goodQuizSummary);
     } else {
         const badQuizSummary = `
         <span class="summary-reponse">"By the beard of Zeus ..."</span>
-        <div class="quiz-summary-container"><img src="images/bad-score-image.jpg" alt="Cartoon Greek Man" height="400px" width="300px"><p class="quiz-summary">Disappointed</p>
+        <div class="quiz-summary-container"><img src="images/bad-score-image.jpg" alt="Cartoon Greek Man" height="400px" width="300px"><p class="quiz-summary">Disappointing...</p>
         <span class="quiz-summary-span">You scored <b>${parseInt(totalCorrect/QUESTIONS.length * 100)}%</b>!</span></div>
         ` 
         $('.js-question-area').html(badQuizSummary);
