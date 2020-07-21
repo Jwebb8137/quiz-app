@@ -6,100 +6,43 @@
     <title>Quiz App</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/baa5cfa84e.js" crossorigin="anonymous"></script>
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins&family=Raleway:wght@600&display=swap" rel="stylesheet"></head>
+
 <body>
     <header>
-        <div class="group">
+        <section class="group">
             <div class="item">
                 <h1>The 7 Wonders Quiz</h1>
             </div>
-        </div>
+        </section>
     </header>
 
     <main>
 
-        <div class="group">
-            <div class="item">
+        <section class="group">
+            <!-- question number container -->
+            <p class="item">
                 <div id="question-number"></div>
-            </div>
-            <div class="item">
+            </p>
+            <!-- total score container -->
+            <p class="item">
                 <div id="total-score"></div>
-            </div>
-            <div class="item">
+            </p>
+            <!-- question area container -->
+            <p class="item">
                 <div class="js-question-area">
-            </div>
-        </div>
+            </p>
+        </section>
 
-    <!-- <form id="js-shopping-list-form" method="post">
+        <!-- next question button container -->
+        <section class="btn-container next-question-container">
 
-            <div class="main-image">
-                <div class="item">
-                    <p>Image Here</p>
-                </div>
-            </div>
-    
-            <div class="question-box">
-                <div class="item">
-                    <p class="js-question">Not rendering...</p>
-                </div>
-            </div>
+        </section>
 
-            <div class="answer-box">
-                <div class="item">
-                    <input type = "radio"
-                        name = "answers"
-                        id = "answer1"
-                        value = "Possible Answer 1"
-                        checked = "checked" />
-                        <span class = "radio-button"></span>
-                    <label for = "answer1">answer1</label>
-                </div>
-            </div>
-    
-            <div class="answer-box">
-                <div class="item">
-                    <input type = "radio"
-                        name = "answers"
-                        id = "answer2"
-                        value = "Possible Answer 2" />
-                     <label for = "answer2">answer2</label>
-                </div>
-            </div>
-    
-            <div class="answer-box">
-                <div class="item">
-                    <input type = "radio"
-                        name = "answers"
-                        id = "answer3"
-                        value = "Possible Answer 3" />
-                    <label for = "answer3">answer3</label>
-                </div>
-            </div>
-    
-            <div class="answer-box">
-                <div class="item">
-                    <input type = "radio"
-                        name = "answers"
-                        id = "answer4"
-                        value = "Possible Answer 4" />
-                    <label for = "answer4">answer4</label>
-                </div>
-            </div>
+        <!-- start over button container -->
+        <section class="btn-container start-over-container">
 
-            <input type="submit" class="btn-style" value="Check Answer">
-            <br>
-        </form> -->
-
-        <div class="btn-container next-question-container">
-            <!-- <button id="next-question" class="btn-style" name="nextQuestion">Next Question <i class="fas fa-arrow-right"></i></button> -->
-        </div>
-        <div class="btn-container start-over-container"></div>   
-            <a href="index.html" id="start-over" class="btn-style" name="startOver">Reset <i class="fas fa-sync"></i></a>
-        </div>
-
+        </section>        
 
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>

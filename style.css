@@ -1,11 +1,13 @@
+/* --- main structure styling --- */
+
 html {
     background-image: url(images/jungle.jpg);
     background-size: cover;
 }
 
 body {
-    background: #7bdff2;
-    color: black;
+    background: #8aecff;
+    color: #000;
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
     text-align: center;
@@ -13,75 +15,21 @@ body {
     opacity: 0.9;
 }
 
-img {
-    border-radius: 15px;
-}
-
-h1 {
-    margin: 50px auto 20px;
-}
-
-h1, #total-score, .correct-answer, .incorrect-answer, .quiz-summary {
-    font-family: 'Bungee', cursive;
-}
-
-#total-score {
-    font-size: 36px;
-}
-
-.mr-5 {
-    margin-right: 25px;
-}
-
-.btn-style {
-    background: white;
-    border-radius: 10px;
-    color: black;
-    border: 3px solid black;
-    font-size: 32px;
-    margin-bottom: 20px;
-    padding: 15px 30px;
-}
-
-button:hover, input[type="submit"]:hover, input:hover, a:hover {
-    background: green;
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
 header {
-    color: black;
+    color: #000;
     display: flex; 
     margin: auto;
-    width: 100%;
+    padding: 10px;
+}
+
+main, html {
+    margin: auto;
+    width: fit-content;
 }
 
 main {
     max-width: 600px;
     padding: 10px;
-    margin: auto;
-}
-
-.main-image {
-    margin: 30px auto;
-    width: 100%;
-}
-
-p {
-    margin: 0 auto;
-}
-
-#question-number {
-    font-size: 32px;
-    margin-bottom: 25px;
-}
-
-.question-box {
-    color: black;
-    display: flex;
-    font-size: 34px;
-    margin: 30px auto 40px;
-    width: 100%;
 }
 
 .group {
@@ -90,53 +38,47 @@ p {
     padding: inherit;
     margin: auto;
 }
-
-main, html {
-    margin: auto;
-    width: fit-content;
-}
   
 .item {
     flex: 1;
 }
 
-  span {
-      padding: 20px;
-  }
-
-.correct-answer {
-    color: green;
-    font-size: 55px;
-    margin-bottom: 30px;  
+a {
+    margin: auto;
+    text-decoration: none;
+    width: 50%;
 }
 
-.incorrect-answer {
-    color: red;
-    font-size: 55px;
-    margin-bottom: 30px;  
+.mr-5 {
+    margin-right: 25px;
 }
 
-.quiz-summary-container {
+span {
+    padding: 20px;
+}
+
+/* --- button styles --- */
+
+.btn-style {
+    background: #fff;
+    border-radius: 10px;
     color: #000;
-    height: 100%;
-    margin: 0 auto 30px;
-    padding: 0 25px;
+    border: 3px solid #000;
+    font-size: 32px;
+    margin-bottom: 20px;
+    padding: 15px 30px;
 }
 
-.quiz-summary {
-    font-size: 48px;
-    margin: 30px auto 25px;
+button:hover, input[type="submit"]:hover, input:hover, a:hover {
+    background: #005200;
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
-.fa-award {
-    color: #000;
-    font-size: 160px;
-    margin: 75px auto 30px;
-}
-
+/* --- radio inputs --- */
 
 .radio {
-    font-size: 2.25rem;
+    font-size: 2rem;
     width: fit-content;
 }
 
@@ -146,6 +88,96 @@ input[type='radio'] {
 
 [type=radio] {
     margin-right: 15px;
+}
+
+/* --- quiz summary styling --- */
+
+.summary-reponse {
+    display: block;
+    font-size: 32px;
+}
+
+.quiz-summary-container {
+    color: #000;
+    height: 100%;
+    margin: 0 auto 30px;
+    padding: 20px 60px 0;
+}
+
+.quiz-summary {
+    font-size: 48px;
+    margin: 30px auto 25px;
+}
+
+.quiz-summary-span {
+    font-size: 36px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#total-score {
+    font-size: 36px;
+}
+
+.start-over-container {
+    margin-top: 35px;
+    padding-bottom: 50px
+}
+
+/* --- Heading / Text Styling --- */
+
+h1 {
+    color: #000;
+    font-size: 60px;
+    margin: 50px auto 20px;
+    padding: 0 15px;
+}
+
+h1, #total-score, .correct-answer, .incorrect-answer, .quiz-summary {
+    font-family: 'Fredoka One', cursive;
+}
+
+p {
+    margin: 0 auto;
+}
+
+/* --- image styling --- */
+
+img {
+    border-radius: 15px;
+}
+
+.main-image {
+    margin: 30px auto;
+    width: 100%;
+}
+
+/* --- question styling --- */
+
+#question-number {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.question-box {
+    color: #000;
+    display: flex;
+    font-size: 30px;
+    margin: 30px auto 40px;
+    width: 100%;
+}
+
+/* --- answer styling --- */
+
+.correct-answer {
+    color: #005200;
+    font-size: 55px;
+    margin-bottom: 10px;  
+}
+
+.incorrect-answer {
+    color: #8A0000;
+    font-size: 55px;
+    margin-bottom: 10px;  
 }
 
 .answer-box {
@@ -158,23 +190,21 @@ input[type='radio'] {
     width: 80%;
 }
 
-a {
-    margin: auto;
-    text-decoration: none;
-    width: 50%;
-}
-
 #submit-answer {
     margin-bottom: 30px;
     margin-top: 30px;
 }
 
 .answer-explanation {
+    color: #000;;
     display: block;
-    font-size: 24px;
+    font-size: 32px;
 }
 
-.quiz-summary-span {
-    font-size: 36px;
+.answer-fact {
+    color: #000;;
+    display: block;
     font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    margin-bottom: 25px;
 }
