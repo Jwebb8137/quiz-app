@@ -133,7 +133,7 @@ function renderQuestion() {
                 </div>
             </section>
             <section class="submit-container">
-                <input type="submit" id="submit-answer" class="btn-style">
+                <input type="submit" value="Submit" id="submit-answer" class="btn-style">
             </section>
             <br>
             <section class="answer-display"></section>
