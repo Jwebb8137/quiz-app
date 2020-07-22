@@ -180,7 +180,7 @@ function handleSubmit() {
         $('.submit-container').html("");
 
         // Render next question button
-        $('.next-question-container').html(`<button id="next-question" class="btn-style" name="nextQuestion">Next Question <i class="fas fa-arrow-right"></i></button>
+        $('.next-question-container').html(`<button id="next-question" class="btn-style" name="nextQuestion">Next <i class="fas fa-arrow-right"></i></button>
         `)
 
         // On click function for next question button
