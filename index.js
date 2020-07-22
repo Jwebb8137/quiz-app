@@ -148,13 +148,13 @@ function questionHtml() {
 function initQuestionHtml() {
     const initQuestion = `Question: 1 / ${STORE.questions.length}`;
     return initQuestion;
-}
+};
 
 //HTML for next question numbers
 function nextQuestionNumHtml() {
     const nextQuestionsNum = `Question: ${(STORE.counter + 1)} / ${STORE.questions.length}`;
     return nextQuestionsNum;
-}
+};
 
 //HTML for correct answer display
 function correctAnswerHtml() {
@@ -186,7 +186,7 @@ function nextButtonHtml() {
 function totalScoreHtml() {
     let totalScore = `Total Score: ${parseInt(STORE.totalCorrect/STORE.questions.length * 100)}%`;
     return totalScore;
-}
+};
 
 //HTML for good quiz summary display
 function goodQuizSummaryHtml() {
@@ -277,7 +277,7 @@ function renderNewQuestion() {
     } else {
         // Call quiz summary 
         renderQuizSummary();
-    }
+    };
 
     //handle displaying question number
     $('#question-number').html("");
@@ -293,7 +293,7 @@ function renderQuizSummary() {
     } else {
         // If score is bad render bad summary 
         $('.js-question-area').html(badQuizSummaryHtml());
-    }
+    };
     //Render try again button / hide other elements
     $('.start-over-container').html(resetButtonHtml())  
     $('.next-question-container').html(""); 
@@ -312,7 +312,7 @@ function handleQuestionList() {
     renderNewQuestion();
     handleScore();  
     startOver();
-}
+};
   
 // when the page loads, call `handleShoppingList`
 $(handleQuestionList);
